@@ -1,0 +1,16 @@
+<!-- index.ejs -->
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    const socket = io();
+
+    socket.on('connect', () => {
+        console.log('Conexión establecida');
+    });
+
+    socket.on('message', (message) => {
+        console.log(`Mensaje recibido: ${message}`);
+    });
+
+  // Resto de la lógica de JavaScript en la vista
+  // ...
+</script>
